@@ -47,9 +47,14 @@ public class Sout {
                 in.nextLine();
             }
         }
+        out(name,city,hobby,age);
+    }
+    static void out (String name, String city, String hobby, int age){
         System.out.println("Выберите вариант вывода : \n 1 обич \n 2 табл \n 3 иное ");
+        Scanner aa = new Scanner(System.in);
 
-        int variant = in.nextInt();
+
+        int variant = aa.nextInt();
         switch (variant) {
 
             case 1:
@@ -65,16 +70,15 @@ public class Sout {
                         "\n" + age + " - возраст\n" + hobby + " - хобби");
                 break;
 
-                default:
-                    System.out.println("Выберите один из вариантов!!");
+            default:
+                System.out.println("Выберите один из вариантов!!");
 
-                    break;
+                out(name,city,hobby,age);
 
-
+                break;
         }
-
-
     }
-
-
 }
+
+
+
