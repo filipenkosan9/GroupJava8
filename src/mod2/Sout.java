@@ -47,23 +47,31 @@ public class Sout {
                 in.nextLine();
             }
         }
+        System.out.println("Выберите вариант вывода : \n 1 обич \n 2 табл \n 3 иное ");
+
+        int variant = in.nextInt();
+        switch (variant) {
+
+            case 1:
+                System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
+                        "" + age + "\nХобби: " + hobby + "\n");
+                break;
+            case 2:
+                System.out.println("Человек по имени " + name + " живет в городе " + city + ".\n" +
+                        "Этому человеку " + age + " лет и любит он заниматься " + hobby + ".\n");
+                break;
+            case 3:
+                System.out.println(name + " - имя\n" + city + " - город" +
+                        "\n" + age + " - возраст\n" + hobby + " - хобби");
+                break;
+
+                default:
+                    System.out.println("Выберите один из вариантов!!");
+
+                    break;
 
 
-        System.out.println("Вариант 1:\n----------");
-        System.out.println("Имя: " + name);
-        System.out.println("Город: " + city);
-        System.out.println("Возраст: " + age);
-        System.out.println("Хобби: " + hobby);
-        System.out.println();
-        System.out.println("Вариант 2:\n----------");
-        System.out.println("Человек по имени " + name + " живет в городе " + city);
-        System.out.println("Этому человеку " + age + "лет и любит он заниматься " + hobby);
-        System.out.println();
-        System.out.println("Вариант 3(инной):\n---------- ");
-        System.out.println("Имя: " + name);
-        System.out.println("Город: " + city);
-        System.out.println("Возраст: " + age);
-        System.out.println("Хобби: " + hobby);
+        }
 
 
     }
