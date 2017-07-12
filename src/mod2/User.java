@@ -40,17 +40,24 @@ public class User {
     public static void vuborVarianta (){
         System.out.println("Выберите вариант");
         int s = in.nextInt();
-        while (s != 4){
+        while (s != 4 ){
+            if (s >=1 && s < 4){
+
             if (s == 1){
                 System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
                         "" + age + "\nХобби: " + hobby + "\n");
-                break;
-                if (s==2) {
+                break;}
+                if (s == 2) {
                     System.out.println("Человек по имени " + name + " живет в городе " + city + ".\n" +
                             "Этому человеку " + age + " лет и любит он заниматься " + hobby + ".\n");
+                    break;
                 }
+                if (s == 3){
+                    System.out.println(name + " - имя\n" + city + " - город" +
+                            "\n" + age + " - возраст\n" + hobby + " - хобби");
+                    break;
 
-            }
+            }}
         }
 
 
