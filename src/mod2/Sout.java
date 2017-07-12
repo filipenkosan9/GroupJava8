@@ -69,7 +69,6 @@ public class Sout {
             }
         }
 
-        out(name, city, hobby, age);
     }
 
     static void out(String name, String city, String hobby, int age) {
