@@ -2,9 +2,7 @@ package mod2;
 
 import java.util.Scanner;
 
-/**
- * Created by Admin on 12.07.2017.
- */
+
 public class User {
 
     private static String name ;
@@ -29,7 +27,6 @@ public class User {
             try {
                 System.out.println("Сколько Вам лет?");
                 age = in.nextInt();
-                in.nextLine();
                 break;
 
             } catch (Exception e) {
@@ -38,7 +35,7 @@ public class User {
             }
         }
 
-
+        vuborVarianta();
     }
     public static int vuborVarianta (){
         int s = in.nextInt();
