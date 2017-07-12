@@ -99,12 +99,10 @@ public class Sout {
                 break;
         }
     }
-    public byte vuborVarianta (byte s){
-        if( s >= 1 && s <= 4 ) {
-            if (s ==1 ) System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
-                    "" + age + "\nХобби: " + hobby + "\n");
-        }
-    }
+    public static byte vuborVarianta (byte s){
+        if( s >= 1 && s <= 4 )
+            return s;
+            }
 }
 
 
