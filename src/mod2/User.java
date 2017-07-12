@@ -38,11 +38,13 @@ public class User {
         vuborVarianta();
     }
     public static int vuborVarianta (){
+        System.out.println("Выберите вариант");
         int s = in.nextInt();
         while (s != 4){
             if (s == 1){
                 System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
                         "" + age + "\nХобби: " + hobby + "\n");
+                break;
 
             }
         }
