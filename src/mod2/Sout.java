@@ -76,10 +76,11 @@ public class Sout {
         System.out.println("Выберите вариант вывода : \n 1 обич \n 2 табл \n 3 иное ");
 
 
-        int variant = in.nextInt();
-        switch (variant) {
+        switch (vuborVarianta()) {
 
             case 1:
+                System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
+                        "" + age + "\nХобби: " + hobby + "\n");
 
                 break;
             case 2:
@@ -99,9 +100,19 @@ public class Sout {
                 break;
         }
     }
-    public static byte vuborVarianta (byte s){
-        if( s >= 1 && s <= 4 )
+    public static int vuborVarianta (){
+        int s = in.nextInt();
+        while (s != 4){
+            if (s == 1){
+                System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
+                        "" + age + "\nХобби: " + hobby + "\n");
+
+            }
+        }
+
+        if( s >= 1 && s <= 3 );
             return s;
+
             }
 }
 
