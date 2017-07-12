@@ -41,6 +41,7 @@ public class User {
         System.out.println("Выберите вариант");
         int s = in.nextInt();
         while (s != 4 ){
+
             if (s >=1 && s < 4){
 
             if (s == 1){
@@ -57,7 +58,8 @@ public class User {
                             "\n" + age + " - возраст\n" + hobby + " - хобби");
                     break;
 
-            }}
+
+            }}in.nextInt();
         }
 
 
