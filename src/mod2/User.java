@@ -38,14 +38,15 @@ public class User {
     }
 
     public static void vuborVarianta() {
-        System.out.println("Выберите вариант");
+        System.out.println("Выберите вариант:\n Вариант 1 (табличный) \n Вариант 2 (текстовый) \n Вариант 3 (иной)" +
+                " \n____________________________\n       или \n нажми 4 и программа завершится ");
         int s = in.nextInt();
         while (s != 4) {
 
             if (s >= 1 && s < 4) {
 
                 if (s == 1) {
-                    System.out.println("Имя: " + name + "\nГород: " + city + "\nВозоаст: " +
+                    System.out.println("Имя: " + name + "\nГород: " + city + "\n Возоаст: " +
                             "" + age + "\nХобби: " + hobby + "\n");
                     break;
                 }
@@ -61,8 +62,8 @@ public class User {
 
 
                 }
-            }
-            in.nextInt();
+            } else if (s > 4) System.out.println("enter new number");
+            s = in.nextInt();
         }
 
 
