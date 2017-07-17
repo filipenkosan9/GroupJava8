@@ -64,6 +64,8 @@ public class Module3 {
         }
 
         povtorenieZnacheniya(Array);
+        System.out.println("минимальное число масива " + arrayMin(Array));
+        System.out.println("максимальное число масива " + arrayMax(Array));
 
 
     }
