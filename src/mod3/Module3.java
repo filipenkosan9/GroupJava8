@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+
 /*
 Задание 1
 
@@ -48,29 +49,36 @@ import java.util.Scanner;
 */
 public class Module3 {
     public static void main(String[] args) throws IOException {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
         System.out.println("Введите количество елементов в масиве: ");
 
-      //  int n = Integer.parseInt(reader.readLine());
-        //int[] Array = new int[n];
-        int[] Array = {12,45,65,2,10,1};
-
+        int arrayElement = Integer.parseInt(reader.readLine());
+        int[] Array = new int[arrayElement];
 
         System.out.println("Введите целочисельные значения");
-//
-//        for (int i = 0; i < Array.length; i++){
-//            System.out.println("Индекс №: " + i);
-//            n = Integer.parseInt(reader.readLine());
-//        }
-        System.out.println(arrayMin(Array));
+        for (int i = 0; i < Array.length; i++) {
+            System.out.println("Индекс №: " + i);
+            Array[i] = Integer.parseInt(reader.readLine());
+        }
 
+        povtorenieZnacheniya(Array);
 
 
     }
-    public static int arrayMin (int[]Array) {
+
+    public  static void povtorenieZnacheniya (int[] Array){
+        int count = 0;
+        for (int i = 0; i < Array.length ; i++) {
+            if(Array[i] == 5)
+                count++;
+        }
+        System.out.println("Число 5 в масиве повторилось " + count + " раз(а)");
+
+    }
+
+    public static int arrayMin(int[] Array) {
 
         int min = Array[0];
         for (int i = 1; i < Array.length; i++) {
@@ -79,5 +87,16 @@ public class Module3 {
             }
         }
         return min;
+    }
+
+    public static int arrayMax(int[] Array) {
+
+        int max = Array[0];
+        for (int i = 1; i < Array.length; i++) {
+            if (max < Array[i]) {
+                max = Array[i];
+            }
+        }
+        return max;
     }
 }
