@@ -1,5 +1,7 @@
 package mod4;
 
+import java.util.Scanner;
+
 /**
  Задание 1
 
@@ -39,4 +41,62 @@ package mod4;
  Программа спрашивает пользователя какую задачу он хочет решить (от 1 до 6). Затем программа вызывает соответствующую функцию для решения этой задачи. По окончанию решения задачи, программа спрашивает пользователя, хочет ли он продолжить решать задачи. Если да - опять спрашивает какую задачу.
  */
 public class HomeWork4 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        int f = sc.nextByte();
+
+        System.out.println("Факториал числа " + f + " равен  - " + factorial(f));
+
+        System.out.println("Вывод фигуры с 2 аргументами: ");
+        drawRectangle(3,4);
+        System.out.println("Вывод фигуры с 1 аргументом: ");
+        drawRectangle((byte) 3);
+        System.out.println("Поиск максимального числа int " + getMax(5,10));
+        System.out.println("Поиск максимального числа float " +getMax(4f,5f));
+
+
+
+    }
+
+    public static int factorial(int x) {
+
+        if (x == 1)
+            return 1;
+
+        int result = factorial(x - 1) * x;
+        return result;
+    }
+
+    public static void drawRectangle(int a, int b) {
+        for (int i = 0; i < a; i++) {
+            for (int j = 0; j < b; j++) {
+                System.out.print("+");
+            }
+            System.out.println(" ");
+
+        }
+
+    }
+    public static void drawRectangle (byte a){
+        for (int i = 0; i < a ; i++) {
+            for (int j = 0; j < a; j++) {
+                System.out.print("+");
+            }
+            System.out.println(" ");
+
+        }
+    }
+    public static int getMax(int a, int b) {
+        if (a > b) {
+            return a;
+        }else return b;
+    }
+    public static float getMax(float a, float b) {
+        if (a > b) {
+            return a;
+        }else return b;
+    }
 }
+
