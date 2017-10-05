@@ -8,16 +8,10 @@ public class Main {
 
 
         CarDoor dor = new CarDoor();
-
-        dor.CloseDoor();
-        dor.ShowInfoDoor();
-        dor.OpenDoor();
-        dor.ShowInfoDoor();
-        System.out.println("________________________");
-
-        dor.ShowInfoWindow();
-        dor.OpenAndCloseWindow();
-        dor.ShowInfoWindow();
+        System.out.println( "door open?"  +  dor.CloseOpenDoor());
+        System.out.println( "door open?"  +  dor.CloseOpenDoor());
+        System.out.println( "door open?"  +  dor.CloseOpenDoor());
+        System.out.println( "door open?"  +  dor.CloseOpenDoor());
 
 
     }
